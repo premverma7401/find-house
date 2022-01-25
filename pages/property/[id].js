@@ -67,8 +67,6 @@ export async function getServerSideProps({ params: { id } })
 {
 
     const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
-    console.log(data, 'dw');
-
     return {
         props: {
             propertyDetails: data
